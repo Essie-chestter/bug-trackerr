@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# MERN Bug Tracker 🐞
 
-## Project info
+A full-stack bug tracking application built with the MERN (MongoDB, Express, React, Node.js) stack. This project demonstrates a systematic approach to **testing**, **debugging**, and **error handling** for both the backend and frontend of a web application.
 
-**URL**: https://lovable.dev/projects/3a7ce4a9-2ec8-42f0-90bf-340ecfe1fa39
+---
 
-## How can I edit this code?
+## 📌 Objective
 
-There are several ways of editing your application.
+- Develop a structured approach to **testing and debugging** MERN applications.
+- Implement **unit**, **integration**, and **component tests**.
+- Use modern **debugging tools and techniques** to identify and resolve issues.
+- Promote best practices to ensure application **stability and reliability**.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3a7ce4a9-2ec8-42f0-90bf-340ecfe1fa39) and start prompting.
+## 🛠️ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+Users can:
 
-**Use your preferred IDE**
+- 🐛 Report new bugs using a simple form.
+- 📋 View a list of all reported bugs.
+- 🔄 Update bug status (e.g., `Open`, `In-Progress`, `Resolved`).
+- ❌ Delete bugs.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Project Structure
 
-Follow these steps:
+mern-testing/
+├── client/                 # React front-end
+│   ├── src/                # React source code
+│   │   ├── components/     # React components
+│   │   ├── tests/          # Client-side tests
+│   │   │   ├── unit/       # Unit tests
+│   │   │   └── integration/ # Integration tests
+│   │   └── App.jsx         # Main application component
+│   └── cypress/            # End-to-end tests
+├── server/                 # Express.js back-end
+│   ├── src/                # Server source code
+│   │   ├── controllers/    # Route controllers
+│   │   ├── models/         # Mongoose models
+│   │   ├── routes/         # API routes
+│   │   └── middleware/     # Custom middleware
+│   └── tests/              # Server-side tests
+│       ├── unit/           # Unit tests
+│       └── integration/    # Integration tests
+├── jest.config.js          # Jest configuration
+└── package.json            # Project dependencies
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- Node.js and npm
+- MongoDB (local or cloud)
+- Git
 
-**Edit a file directly in GitHub**
+### Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/mern-bug-tracker.git
+cd mern-bug-tracker
 
-**Use GitHub Codespaces**
+# Install backend dependencies
+cd backend
+npm install
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3a7ce4a9-2ec8-42f0-90bf-340ecfe1fa39) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Install frontend dependencies
+cd ../frontend
+npm install
