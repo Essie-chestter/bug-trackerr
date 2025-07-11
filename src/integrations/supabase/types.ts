@@ -14,7 +14,96 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bugs: {
+        Row: {
+          actual_behavior: string | null
+          assigned_to: string | null
+          created_at: string
+          description: string
+          expected_behavior: string | null
+          id: string
+          priority: Database["public"]["Enums"]["bug_priority"]
+          reported_by: string
+          severity: Database["public"]["Enums"]["bug_severity"]
+          status: Database["public"]["Enums"]["bug_status"]
+          steps_to_reproduce: string | null
+          tags: string[] | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          actual_behavior?: string | null
+          assigned_to?: string | null
+          created_at?: string
+          description: string
+          expected_behavior?: string | null
+          id?: string
+          priority: Database["public"]["Enums"]["bug_priority"]
+          reported_by: string
+          severity: Database["public"]["Enums"]["bug_severity"]
+          status?: Database["public"]["Enums"]["bug_status"]
+          steps_to_reproduce?: string | null
+          tags?: string[] | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          actual_behavior?: string | null
+          assigned_to?: string | null
+          created_at?: string
+          description?: string
+          expected_behavior?: string | null
+          id?: string
+          priority?: Database["public"]["Enums"]["bug_priority"]
+          reported_by?: string
+          severity?: Database["public"]["Enums"]["bug_severity"]
+          status?: Database["public"]["Enums"]["bug_status"]
+          steps_to_reproduce?: string | null
+          tags?: string[] | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bugs_assigned_to_fkey"
+            columns: ["assigned_to"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "bugs_reported_by_fkey"
+            columns: ["reported_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +112,9 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      bug_priority: "low" | "medium" | "high" | "critical"
+      bug_severity: "low" | "medium" | "high" | "critical"
+      bug_status: "open" | "in-progress" | "resolved"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +241,10 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      bug_priority: ["low", "medium", "high", "critical"],
+      bug_severity: ["low", "medium", "high", "critical"],
+      bug_status: ["open", "in-progress", "resolved"],
+    },
   },
 } as const
