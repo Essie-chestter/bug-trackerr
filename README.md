@@ -73,26 +73,115 @@ cd ../frontend
 npm install
 
 
-## Running the application 
+## Running the Application
 
-# backend 
+# Backend (Express Server)
 
 cd backend
 npm run dev
 
-#front-end 
+# Frontend (React App)
 
 cd frontend
 npm start
 
-##Testing 
 
-# backend 
+---
+
+## ✅ Testing
+
+# Backend Testing
+
+Libraries Used: Jest, Supertest, jest-mock
+
+Tests Included:
+
+Unit tests for helper functions (e.g., validation)
+
+Integration tests for API routes (POST, GET, PATCH, DELETE)
+
+Mocking database calls for isolated test cases
+
+
+
+To run backend tests:
 
 cd backend
 npm test
 
-# Front-end 
+# Frontend Testing
+
+Libraries Used: React Testing Library, Jest
+
+Tests Included:
+
+Unit tests for UI components and event handlers
+
+Integration tests to validate API calls and UI updates
+
+UI state testing for scenarios like:
+
+Empty bug list
+
+API errors
+
+Loading indicators
+
+
+
+
+To run frontend tests:
 
 cd frontend
 npm test
+
+
+---
+
+## 🐞 Debugging Techniques
+
+Intentional bugs were introduced to practice debugging with:
+
+Console Logs: To track variables and logic flow.
+
+Chrome DevTools:
+
+Inspect network activity
+
+Monitor React component state
+
+
+Node.js Inspector:
+
+Run backend with: node --inspect app.js
+
+Use Chrome or VS Code to debug
+
+
+React Error Boundaries:
+
+Capture component errors without crashing the app
+
+
+
+
+---
+
+## ⚠️ Error Handling
+
+Backend
+
+Implemented global error handling middleware in Express.
+
+Standardized error response format.
+
+
+Frontend
+
+Added React error boundaries to gracefully handle UI crashes.
+
+Display user-friendly messages when operations fail.
+
+
+
+---
