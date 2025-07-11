@@ -26,7 +26,21 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
+				},
+				// Bug status colors
+				status: {
+					open: 'hsl(var(--status-open))',
+					progress: 'hsl(var(--status-progress))', 
+					resolved: 'hsl(var(--status-resolved))'
+				},
+				// Severity colors
+				severity: {
+					critical: 'hsl(var(--severity-critical))',
+					high: 'hsl(var(--severity-high))',
+					medium: 'hsl(var(--severity-medium))',
+					low: 'hsl(var(--severity-low))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
