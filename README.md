@@ -71,3 +71,28 @@ npm install
 # Install frontend dependencies
 cd ../frontend
 npm install
+
+
+## Running the application 
+
+# backend 
+
+cd backend
+npm run dev
+
+#front-end 
+
+cd frontend
+npm start
+
+##Testing 
+
+# backend 
+
+cd backend
+npm test
+
+# Front-end 
+
+cd frontend
+npm test
